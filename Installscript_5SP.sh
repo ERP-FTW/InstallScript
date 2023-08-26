@@ -407,7 +407,7 @@ else
   fi
 fi
 
-git clone https://github.com/ERP-FTW/mlr_pos_community/tree/16_nodeless /odoo/odoo-server/addons/mlr_pos_community
+git clone --branch 16_nodeless https://github.com/ERP-FTW/mlr_pos_community /odoo/odoo-server/addons/mlr_pos_community-16_nodeless
 
 echo -e "* Starting Odoo Service"
 sudo su root -c "/etc/init.d/$OE_CONFIG start"
