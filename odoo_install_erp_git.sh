@@ -381,10 +381,8 @@ else
   echo "SSL/HTTPS isn't enabled due to choice of the user or because of a misconfiguration!"
 fi
 
-git clone https://github.com/ERP-FTW/mlr_pos_community /odoo/odoo-server/addons/mlr_pos_community
-git clone https://github.com/ERP-FTW/mlr_pos_cryptopayments/tree/main/mlr_pos_cryptopayments /odoo/odoo-server/addons/mlr_pos_cryptopayments
-git clone https://github.com/ERP-FTW/mlr_pos_btcpay/tree/main/mlr_pos_btcpay /odoo/odoo-server/addons/mlr_pos_btcpay
-
+git clone -b script https://github.com/ERP-FTW/mlr_pos_cryptopayments /odoo/odoo-server/addons/mlr_pos_cryptopayments
+git clone -b script https://github.com/ERP-FTW/mlr_pos_btcpay/ /odoo/odoo-server/addons/mlr_pos_btcpay
 
 echo -e "* Starting Odoo Service"
 sudo su root -c "/etc/init.d/$OE_CONFIG start"
